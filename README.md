@@ -7,10 +7,10 @@
 <br>
 example:
 <br>
-FreeForWenku https://wenku.baidu.com/view/09f3e7c9a1c7aa00b52acb96.html?from=search  ppt
+python ./FreeForWenku.py https://wenku.baidu.com/view/09f3e7c9a1c7aa00b52acb96.html?from=search ppt
 <br>
 PPT,PDF会保存图片到文件夹
 <br>
-DOC，TXT会保存在文本中
+DOC,TXT会保存在文本中
 <br>
 最大可能的还原了格式。

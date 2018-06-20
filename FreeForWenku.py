@@ -1,10 +1,12 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 import requests
 import re
 import argparse
 import sys
 import json
 import os
-
 
 parser = argparse.ArgumentParser()
 parser.add_argument("url", help="Target Url,你所需要文档的URL",type=str)
@@ -55,7 +57,7 @@ def PPT(url):
         pass
     for i in range(0,len(lists)):
         img=requests.get(lists[i]).content
-        with open(doc_id+'\img'+str(i)+'.jpg','wb') as m:
+        with open(doc_id+os.path.sep+'img'+str(i)+'.jpg','wb') as m:
             m.write(img)
     print("PPT图片保存在" + doc_id +"文件夹")
 
@@ -93,7 +95,7 @@ def PDF(url):
         pass
     for i in range(0,len(lists)):
         img=requests.get(lists[i]).content
-        with open(doc_id+'\img'+str(i)+'.jpg','wb') as m:
+        with open(doc_id+os.path.sep+'img'+str(i)+'.jpg','wb') as m:
             m.write(img)
     print("FPD图片保存在" + doc_id + "文件夹")
 
